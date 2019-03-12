@@ -106,7 +106,7 @@ public class CheckoutActivity extends AppCompatActivity {
         String url = "http://folk.ntnu.no/jennyjy/addorder.php/?order="; // Change URL
         url += orderHashMapToString();
         sendRequest(url);
-        Intent intent = new Intent(this, ConfirmationActivity.class);
+        Intent intent = new Intent(this, PickupActivity.class);
         //intent.putParcelableArrayListExtra(OrderIntent, (ArrayList<? extends Parcelable>) this.order);
         startActivity(intent);
 

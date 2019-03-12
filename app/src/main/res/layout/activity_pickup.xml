@@ -7,7 +7,7 @@
     tools:context=".PickupActivity">
 
     <Button
-        android:id="@+id/return"
+        android:id="@+id/return_"
         android:layout_width="115dp"
         android:layout_height="49dp"
         android:layout_marginStart="148dp"
@@ -16,6 +16,7 @@
         android:layout_marginEnd="148dp"
         android:layout_marginRight="148dp"
         android:layout_marginBottom="40dp"
+        android:onClick="onButtonReturn"
         android:text="Return"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -46,6 +47,7 @@
         android:layout_marginEnd="148dp"
         android:layout_marginRight="148dp"
         android:layout_marginBottom="40dp"
+        android:onClick="onButtonPlaceOrder"
         android:text="Place order"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
