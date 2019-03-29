@@ -62,7 +62,7 @@ public class PickupActivity extends AppCompatActivity implements TimePickerDialo
             @Override
             public void onClick(View v) {
                 DialogFragment timePicker = new TimePickerFragment();
-                timePicker.show(getSupportFragmentManager(), "Pick time");
+                timePicker.show(getSupportFragmentManager(), "Choose pick-up time");
             }
         });
     }
@@ -92,10 +92,10 @@ public class PickupActivity extends AppCompatActivity implements TimePickerDialo
             this.errorText.setText("");
             if (time_selected >= (time_now + 0.5 )) {
                 this.bool = true;
-                this.textTime.setText("Time:      " + hourOfDay + ":" + min);
+                this.textTime.setText("Pick-up time:  " + hourOfDay + ":" + min);
             } else {
                 this.bool = false;
-                this.errorText.setText("Invalid time! Cannot choose a pick-up time earlier than in 30 minutes");
+                this.errorText.setText("Invalid time! Please choose a pick-up time 30 mins from now.");
             }
         }
     }
