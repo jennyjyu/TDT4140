@@ -86,23 +86,6 @@ public class PickupActivity extends AppCompatActivity implements TimePickerDialo
 
         this.hourOfDay = hour;
         this.min = min;
-<<<<<<< HEAD
-        double time_selected = hourOfDay + min/60;
-        Calendar c = Calendar.getInstance();
-        int hour_ = c.get(Calendar.HOUR_OF_DAY);
-        int min_ = c.get(Calendar.MINUTE);
-        double time_now = hour_ + min_/60;
-
-        for (int i = 0;i <1000;i++) {
-            this.textTime.setText("");
-            this.errorText.setText("");
-            if (time_selected >= (time_now + 0.5 )) {
-                this.bool = true;
-                this.textTime.setText("Pick-up time:  " + hourOfDay + ":" + min);
-            } else {
-                this.bool = false;
-                this.errorText.setText("Invalid time! Please choose a pick-up time 30 mins from now.");
-=======
         double time_selected = (double) (hour) + ((double) min / 60);
         Calendar calendar = Calendar.getInstance();
         int currentHour = calendar.get(Calendar.HOUR_OF_DAY);
@@ -135,7 +118,6 @@ public class PickupActivity extends AppCompatActivity implements TimePickerDialo
             } else {
                 this.placeOrderBtn.setEnabled(true);
                 this.textTime.setText("Time:      " + hour + ":" + min);
->>>>>>> origin
             }
         }
 
