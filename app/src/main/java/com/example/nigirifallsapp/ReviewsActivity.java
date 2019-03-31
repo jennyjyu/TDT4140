@@ -35,7 +35,12 @@ import java.util.List;
 public class ReviewsActivity extends AppCompatActivity {
 
     RequestQueue requestQueue;
+    Button buttonConfirm;
+    Button buttonFinish;
     LinearLayout linearLayoutReview;
+    int reviewIndex;
+    int reviewID_;
+    private int defaultColor;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
 
@@ -45,16 +50,18 @@ public class ReviewsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_reviews);
 
         this.requestQueue = Volley.newRequestQueue(this);
+
         this.linearLayoutReview = findViewById(R.id.linearLayoutReviewOuter);
         this.drawerLayout = findViewById(R.id.drawer_layout);
-
+        //setTitle("Orders for " + this.sharedPreferences.getString("locationString", "error"));
+        setTitle("User Reviews");
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setHomeAsUpIndicator(R.drawable.icon_menu);
         this.navigationView = findViewById(R.id.nav_view);
-        this.navigationView.getMenu().getItem(1).setChecked(true);
+        this.navigationView.getMenu().getItem(0).setChecked(true);
         this.navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
@@ -80,7 +87,8 @@ public class ReviewsActivity extends AppCompatActivity {
                 drawerLayout.openDrawer(GravityCompat.START);
                 return true;
             case R.id.nav_admin_orders:
-                NavUtils.navigateUpFromSameTask(this);
+                Intent intent = new Intent(this, AdminActivity.class);
+                startActivity(intent);
                 return true;
             case R.id.nav_admin_reviews:
                 return true;
@@ -142,12 +150,13 @@ public class ReviewsActivity extends AppCompatActivity {
     }
 
 
+    // This function is called on the hardware back-button on the phone.
     @Override
     public void onBackPressed() {
         if (this.drawerLayout.isDrawerOpen(GravityCompat.START)) {
             this.drawerLayout.closeDrawer(GravityCompat.START);
         } else {
-            NavUtils.navigateUpFromSameTask(this);
+            logOutAlert();
         }
     }
 
@@ -162,13 +171,13 @@ public class ReviewsActivity extends AppCompatActivity {
                 }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                navigationView.getMenu().getItem(1).setChecked(true);
+                navigationView.getMenu().getItem(0).setChecked(true);
                 dialog.dismiss();
             }
         }).setOnDismissListener(new DialogInterface.OnDismissListener() {
             @Override
             public void onDismiss(DialogInterface dialog) {
-                navigationView.getMenu().getItem(1).setChecked(true);
+                navigationView.getMenu().getItem(0).setChecked(true);
             }
         });
         AlertDialog dialog = builder.create();
@@ -179,9 +188,7 @@ public class ReviewsActivity extends AppCompatActivity {
         SharedPreferences sp = getSharedPreferences("login", MODE_PRIVATE);
         sp.edit().putBoolean("logged", false).apply();
         sp.edit().putString("phonenumber", null).apply();
-        Intent intent = new Intent(this, LoginActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP); // This clears all activities except Location and Login
-        startActivity(intent);
+        NavUtils.navigateUpFromSameTask(this); // This clears the Menu activity from the activity stack. Only Login activity now.
     }
 }
 
