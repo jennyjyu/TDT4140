@@ -1,4 +1,4 @@
-package com.example.nigirifallsapp;
+package com.example.nigirifallsapp.Activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,6 +14,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
+import com.example.nigirifallsapp.ResourceClasses.Dish;
+import com.example.nigirifallsapp.R;
+
 import java.util.HashMap;
 import java.util.Map;
 

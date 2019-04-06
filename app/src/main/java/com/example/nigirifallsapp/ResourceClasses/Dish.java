@@ -1,4 +1,4 @@
-package com.example.nigirifallsapp;
+package com.example.nigirifallsapp.ResourceClasses;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 
 // The class implements Parcelable because it is required to pass the ArrayList order.
 public class Dish extends AppCompatActivity implements Parcelable {
-    int dishID;
+    public int dishID;
     String name;
     String description;
     int price;

@@ -1,4 +1,4 @@
-package com.example.nigirifallsapp;
+package com.example.nigirifallsapp.ResourceClasses;
 
 import android.os.Parcel;
 import android.os.Parcelable;
