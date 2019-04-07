@@ -1,6 +1,6 @@
 # Nigiri falls - takeout application
 
-An Android application ordered by the sushi restaurant Nigiri Falls to enable takeout from the restaurant. The application will be used by costumers to place orders from the restaurants three locations in Oslo, Trondheim and Bergen, and by the employees to review and edit orders.
+An Android application ordered by the sushi restaurant Nigiri Falls to enable takeout from the restaurant. The application will be used by customers to place orders from the restaurants three locations in Oslo, Trondheim and Bergen, and by the employees to review and edit orders.
 
 ## Running the application
 
