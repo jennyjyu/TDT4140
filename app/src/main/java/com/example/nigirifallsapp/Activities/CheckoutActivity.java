@@ -36,7 +36,7 @@ public class CheckoutActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.checkout_layout);
+        setContentView(R.layout.activity_checkout);
         this.buttonPlaceOrder = findViewById(R.id.buttonPickUpTime);
         this.buttonBackToMenu = findViewById(R.id.clearAllButton);
         this.requestQueue = Volley.newRequestQueue(this);
@@ -55,7 +55,7 @@ public class CheckoutActivity extends AppCompatActivity {
         for (Map.Entry<Dish, Integer> map : numOfEachDish.entrySet()) {
             if (map.getValue() != 0) {
                 LayoutInflater layoutInflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                View dishView = layoutInflater.inflate(R.layout.activity_dish_checkout, null);
+                View dishView = layoutInflater.inflate(R.layout.dish_in_checkout, null);
 
                 TextView textName = dishView.findViewById(R.id.textName);
                 //TextView textDesc = dishView.findViewById(R.id.textDesc);

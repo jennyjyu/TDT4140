@@ -70,7 +70,7 @@ public class ConfirmationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.initOrderID();
-        setContentView(R.layout.confirmation_activity_layout);
+        setContentView(R.layout.activity_confirmation);
 
         Intent intent = this.getIntent();
         Bundle extras = intent.getExtras();

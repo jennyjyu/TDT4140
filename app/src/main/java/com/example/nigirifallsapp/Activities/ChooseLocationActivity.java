@@ -16,7 +16,7 @@ public class ChooseLocationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.choose_location_activity_layout);
+        setContentView(R.layout.activity_choose_location);
 
         this.sharedPreferences = getSharedPreferences("login", MODE_PRIVATE); // Rename from login
 

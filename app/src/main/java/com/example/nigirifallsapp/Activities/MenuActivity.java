@@ -58,7 +58,7 @@ public class MenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menu_activity_layout);
+        setContentView(R.layout.activity_menu);
         this.requestQueue = Volley.newRequestQueue(this);
         this.sendRequest("https://org.ntnu.no/nigiriapp/getalldish.php"); //http://folk.ntnu.no/magnuti/getalldish.php
         this.buttonCheckout = findViewById(R.id.buttonCheckout);
