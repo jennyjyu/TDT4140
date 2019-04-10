@@ -1,5 +1,4 @@
-package com.example.nigirifallsapp;
-import android.util.Log;
+package com.example.nigirifallsapp.ResourceClasses;
 
 import java.util.ArrayList;
 import java.util.List;

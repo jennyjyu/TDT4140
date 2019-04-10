@@ -1,9 +1,8 @@
-package com.example.nigirifallsapp;
+package com.example.nigirifallsapp.Activities;
 
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.NavUtils;
 import android.support.v4.view.GravityCompat;
@@ -16,8 +15,6 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
@@ -29,6 +26,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.nigirifallsapp.R;
 
 
 public class ConfirmationActivity extends AppCompatActivity {
@@ -72,7 +70,7 @@ public class ConfirmationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.initOrderID();
-        setContentView(R.layout.confirmation_activity_layout);
+        setContentView(R.layout.activity_confirmation);
 
         Intent intent = this.getIntent();
         Bundle extras = intent.getExtras();
@@ -142,7 +140,7 @@ public class ConfirmationActivity extends AppCompatActivity {
                 logOutAlert();
                 return true;
             case R.id.nav_myOrders:
-                Intent intent = new Intent(this, OrderHistory.class);
+                Intent intent = new Intent(this, OrderHistoryActivity.class);
                 startActivity(intent);
                 return true;
         }

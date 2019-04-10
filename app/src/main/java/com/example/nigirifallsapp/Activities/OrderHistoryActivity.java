@@ -1,17 +1,12 @@
-package com.example.nigirifallsapp;
+package com.example.nigirifallsapp.Activities;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Resources;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.preference.DialogPreference;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.NavUtils;
-import android.support.v4.content.res.ResourcesCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -33,11 +28,13 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.nigirifallsapp.ResourceClasses.OrderInAdmin;
+import com.example.nigirifallsapp.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class OrderHistory extends AppCompatActivity {
+public class OrderHistoryActivity extends AppCompatActivity {
 
     RequestQueue requestQueue;
     LinearLayout linearLayoutHistory;

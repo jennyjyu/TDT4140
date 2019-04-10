@@ -1,4 +1,4 @@
-package com.example.nigirifallsapp;
+package com.example.nigirifallsapp.ResourceClasses;
 
 import java.util.ArrayList;
 import java.util.List;

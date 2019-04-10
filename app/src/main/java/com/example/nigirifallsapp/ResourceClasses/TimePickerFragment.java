@@ -1,4 +1,4 @@
-package com.example.nigirifallsapp;
+package com.example.nigirifallsapp.ResourceClasses;
 
 import android.app.Dialog;
 import android.app.TimePickerDialog;
@@ -22,5 +22,4 @@ public class TimePickerFragment extends DialogFragment {
 
         return new TimePickerDialog(getActivity(), (TimePickerDialog.OnTimeSetListener) getActivity(), hour, min, DateFormat.is24HourFormat(getActivity()));
     }
-
 }

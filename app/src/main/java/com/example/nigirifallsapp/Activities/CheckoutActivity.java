@@ -1,4 +1,4 @@
-package com.example.nigirifallsapp;
+package com.example.nigirifallsapp.Activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -14,6 +14,9 @@ import android.widget.Button;
 import android.widget.TextView;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
+import com.example.nigirifallsapp.ResourceClasses.Dish;
+import com.example.nigirifallsapp.R;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -33,7 +36,7 @@ public class CheckoutActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.checkout_layout);
+        setContentView(R.layout.activity_checkout);
         this.buttonPlaceOrder = findViewById(R.id.buttonPickUpTime);
         this.buttonBackToMenu = findViewById(R.id.clearAllButton);
         this.requestQueue = Volley.newRequestQueue(this);
@@ -52,7 +55,7 @@ public class CheckoutActivity extends AppCompatActivity {
         for (Map.Entry<Dish, Integer> map : numOfEachDish.entrySet()) {
             if (map.getValue() != 0) {
                 LayoutInflater layoutInflater = (LayoutInflater) getApplicationContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                View dishView = layoutInflater.inflate(R.layout.activity_dish_checkout, null);
+                View dishView = layoutInflater.inflate(R.layout.dish_in_checkout, null);
 
                 TextView textName = dishView.findViewById(R.id.textName);
                 //TextView textDesc = dishView.findViewById(R.id.textDesc);

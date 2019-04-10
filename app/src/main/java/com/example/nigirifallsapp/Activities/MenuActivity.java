@@ -1,10 +1,9 @@
-package com.example.nigirifallsapp;
+package com.example.nigirifallsapp.Activities;
 
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.DialogFragment;
 import android.support.v4.app.NavUtils;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -13,7 +12,6 @@ import android.support.v7.app.AlertDialog;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,12 +27,14 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.nigirifallsapp.ResourceClasses.Dish;
+import com.example.nigirifallsapp.ResourceClasses.Menu;
+import com.example.nigirifallsapp.ResourceClasses.Order;
+import com.example.nigirifallsapp.R;
 import com.miguelcatalan.materialsearchview.MaterialSearchView;
 
-import android.widget.Button;
 import android.support.v7.widget.Toolbar;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.io.Serializable;
@@ -58,7 +58,7 @@ public class MenuActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.menu_activity_layout);
+        setContentView(R.layout.activity_menu);
         this.requestQueue = Volley.newRequestQueue(this);
         this.sendRequest("https://org.ntnu.no/nigiriapp/getalldish.php"); //http://folk.ntnu.no/magnuti/getalldish.php
         this.buttonCheckout = findViewById(R.id.buttonCheckout);
@@ -152,7 +152,7 @@ public class MenuActivity extends AppCompatActivity {
                 logOutAlert();
                 return true;
             case R.id.nav_myOrders:
-                Intent intent = new Intent(this, OrderHistory.class);
+                Intent intent = new Intent(this, OrderHistoryActivity.class);
                 startActivity(intent);
                 return true;
 
