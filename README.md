@@ -57,6 +57,10 @@ Login to the database at https://mysqladmin.stud.ntnu.no
 * SQL - Database management
 * PHP - REST Web API
 
+## Third-party software component
+* MaterialSearchView - https://github.com/MiguelCatalan/MaterialSearchView
+
+
 
 ## Authored by
 
