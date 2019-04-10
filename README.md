@@ -4,10 +4,6 @@ An Android application ordered by the sushi restaurant Nigiri Falls to enable ta
 
 ## Get started
 
-### Running the application
-
-The application can be run on an Android emulator or on an Android phone with API 26 or higher. To run the application go through the following steps:
-
 ### Install Android studio
 
 At the moment, the only way to run the application is through Android studio. Download Android studio here: https://developer.android.com/studio/ and install it.
@@ -29,7 +25,7 @@ a
 
 **Now you should see the project files from GitLab in Android Studio**
 ### Add necessary file to your repository
-
+This is only required if you need to make code changes.
 *  Create a new file called `local.properties` **Not in a subfolder, just next to README.md etc.** 
 *  Addt this line to it `sdk.dir=/home/USER/Android/Sdk` with USER being your PC username 
 
